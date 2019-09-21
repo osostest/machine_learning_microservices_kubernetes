@@ -9,7 +9,7 @@ jobs:
     # Use the same Docker base as the project
       - image: python:3.7.3-stretch
 
-    working_directory: https://github.com/herrera-luis/machine_learning_microservices_kubernetes
+    working_directory: ~/repo
 
     steps:
       - checkout
