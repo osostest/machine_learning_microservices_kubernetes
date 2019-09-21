@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://circleci.com/gh/herrera-luis/machine_learning_microservices_kubernetes.svg?style=svg)](https://circleci.com/gh/herrera-luis/machine_learning_microservices_kubernetes)
 
 ## Project Overview
 
