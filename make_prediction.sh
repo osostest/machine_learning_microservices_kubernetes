@@ -6,7 +6,7 @@ echo "Port: $PORT"
 # POST method predict
 curl -d '{  
    "CHAS":{  
-      "0":0
+      "0":0.2
    },
    "RM":{  
       "0":6.575

@@ -1,3 +1,0 @@
-FROM circleci/circleci-cli:alpine
-RUN  apk add --update docker openrc
-RUN  rc-update add docker boot
