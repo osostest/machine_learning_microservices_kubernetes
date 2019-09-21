@@ -1,1 +1,16 @@
-<paste log output from Kubernetes-mediated prediction, here>
+~/docker_projects/machine_learning_microservices_kubernetes
+> ./run_kubernetes.sh                                                                                                              60% (1:59) 
+kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
+deployment.apps/machine-learning-app created
+NAME                                    READY   STATUS              RESTARTS   AGE
+machine-learning-app-7bdf4f7d54-c4fhh   0/1     ContainerCreating   0          1s
+error: unable to forward port because pod is not running. Current status=Pending
+
+~/docker_projects/machine_learning_microservices_kubernetes
+> ./run_kubernetes.sh                                                                                                        60% (1:59) 
+kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
+Error from server (AlreadyExists): deployments.apps "machine-learning-app" already exists
+NAME                                    READY   STATUS    RESTARTS   AGE
+machine-learning-app-7bdf4f7d54-c4fhh   1/1     Running   0          14s
+Forwarding from 0.0.0.0:8000 -> 80
+Handling connection for 8000
