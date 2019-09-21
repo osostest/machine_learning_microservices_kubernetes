@@ -1,16 +1,26 @@
 ~/docker_projects/machine_learning_microservices_kubernetes
-> ./run_kubernetes.sh                                                                                                              60% (1:59) 
+> ./run_kubernetes.sh                                                                                                           8% (0:15) 
 kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
 deployment.apps/machine-learning-app created
-NAME                                    READY   STATUS              RESTARTS   AGE
-machine-learning-app-7bdf4f7d54-c4fhh   0/1     ContainerCreating   0          1s
+NAME                                   READY   STATUS              RESTARTS   AGE
+machine-learning-app-86bf568d8-t9qtm   0/1     ContainerCreating   0          0s
 error: unable to forward port because pod is not running. Current status=Pending
 
 ~/docker_projects/machine_learning_microservices_kubernetes
 > ./run_kubernetes.sh                                                                                                        60% (1:59) 
 kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
 Error from server (AlreadyExists): deployments.apps "machine-learning-app" already exists
-NAME                                    READY   STATUS    RESTARTS   AGE
-machine-learning-app-7bdf4f7d54-c4fhh   1/1     Running   0          14s
+NAME                                   READY   STATUS    RESTARTS   AGE
+machine-learning-app-86bf568d8-9crfz   1/1     Running   0          8s
 Forwarding from 0.0.0.0:8000 -> 80
 Handling connection for 8000
+^C{'CHAS': {'0': 0.2}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2019-09-21 23:22:22,059] INFO in app: Inference payload DataFrame:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0   0.2  6.575  296.0     15.3  396.9   4.98
+[2019-09-21 23:22:22,074] INFO in app: Scaling Payload:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0   0.2  6.575  296.0     15.3  396.9   4.98
+[2019-09-21 23:22:22,078] INFO in app: Output prediction:
+{'prediction': [20.35373177134412]}
+127.0.0.1 - - [21/Sep/2019 23:22:22] "POST /predict HTTP/1.1" 200 -
