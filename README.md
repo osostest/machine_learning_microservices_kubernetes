@@ -6,20 +6,27 @@ You are given a pre-trained, `sklearn` model that has been trained to predict ho
 
 ---
 
-## Setup the Environment
+### Running locally `app.py`
 
-* Create a virtualenv and activate it
-* Run `make install` to install the necessary dependencies
+1. Create an environment: `virtualenv env_devops`
+2. Set your environment: `source env_devops/bin/activate`
+3. Install dependencies: `make install` or `pip install -r requirements.txt`
+4. Run app:  `python app.py`
 
-### Running `app.py`
+### Running with Docker
 
-1. Standalone:  `python app.py`
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
+1. Install Docker
+2. Execute the script: `sh ./run_docker.sh`
+3. Application will be expose on port 80
 
-### Kubernetes Steps
+### Running with Kubernetes (MiniKube)
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+1. Install or activate MiniKube
+2. Execute the script: `sh ./run_kubernetes.sh`
+3. Application will be expose on port 80
+
+### Testing Housing Princing Model
+
+After application is running you can do calls to the housing pricing model with the next script:
+
+`sh ./make_prediction.sh`
