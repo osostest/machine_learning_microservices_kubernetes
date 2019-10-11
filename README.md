@@ -32,4 +32,4 @@ After application is running you can do calls to the housing pricing model with 
 `sh ./make_prediction.sh`
 
 ---
-**You can see the execution results in [images](https://github.com/herrera-luis/machine_learning_microservices_kubernetes/images) folder**
+**You can see the execution results in [images](https://github.com/herrera-luis/machine_learning_microservices_kubernetes/tree/master/images) folder**
